@@ -1,0 +1,30 @@
+.app-header {
+   position: relative;
+   background-image: url('/images/bg.jpg');
+   background-size: 350%;
+   max-width: 100vw;
+   padding: 15vh 0 30vh 3vw;
+   color: $primary-black;
+   box-sizing: border-box;
+   z-index: 40;
+   .header__company-name {
+      font-size: $font-large;
+      margin-bottom: 3vh;
+   }
+   .header__company-slogan {
+      font-size: $font-medium;
+      z-index: 1000;
+      padding-bottom: 5vh;
+   }
+   .header__underline {
+      opacity: 1;
+      width: 50vw;
+      height: 20px;
+      background-color: lighten($contrast-gold, 50);
+   }
+   .header__main-paragraph {
+      margin-top: 15vh;
+      font-size: $semi-medium-16;
+      line-height: 140%;
+   }
+}

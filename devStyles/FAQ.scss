@@ -1,0 +1,16 @@
+.FAQ {
+   padding-bottom: 10vh;
+   .FAQ__list {
+      .FAQ__answer {
+         font-size: $font-normal;
+         line-height: 140%;
+      }
+
+      .FAQ__question {
+         font-size: $font-medium;
+         color: $secondary-silver;
+         margin: 20vh 0 5vh 0;
+         border-bottom: 20px solid transparentize($contrast-gold, 0.3);
+      }
+   }
+}

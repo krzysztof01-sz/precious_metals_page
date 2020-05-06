@@ -1,0 +1,194 @@
+@import 'variables';
+
+@media only screen and (min-width: 1000px) {
+   .header {
+      font-size: $font-large;
+      margin: 20vh 10vw;
+   }
+   .app-header {
+      background-size: 180%;
+      .header__company-name {
+         font-size: $font-large;
+         margin-bottom: 3vh;
+      }
+      .header__company-slogan {
+         font-size: $font-medium;
+         z-index: 1000;
+         padding-bottom: 5vh;
+         width: 55vw;
+      }
+      .header__main-paragraph {
+         width: 55vw;
+         margin: 10vh 0;
+         font-size: $semi-medium;
+      }
+   }
+   .app-informations {
+      width: 80vw;
+      margin: 0 auto;
+      .metals-prices-chart {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+   .wrapper {
+      display: flex;
+      align-items: center;
+      img {
+         width: 20vw;
+         margin: 5vh 10vw;
+      }
+      .special-img {
+         width: 30vw;
+         margin: 5vh 8vw;
+      }
+      .rotated-photo {
+         transform: rotate(0deg);
+      }
+      .paragraph {
+         line-height: 160%;
+         width: 35vw;
+         font-size: $font-normal;
+      }
+   }
+   .gold-titbits {
+      .titbit {
+         width: 80vw;
+         &::before {
+            left: -1vw;
+            top: 3vh;
+         }
+      }
+   }
+   .paragraph,
+   .list {
+      line-height: 140%;
+      margin: 5vh auto;
+      width: 90vw;
+      .list-item {
+         position: relative;
+         margin: 0 0 5vh 7vw;
+         font-family: 'Source Sans Pro', sans-serif;
+      }
+   }
+   .company-adventages-wrapper {
+      .company-adventages {
+         display: flex;
+         width: 95vw;
+         margin: 0 auto;
+         .list {
+            margin: 0 auto;
+         }
+      }
+   }
+   .FAQ__list li {
+      width: 70vw;
+      font-size: $semi-medium;
+      margin: 10vh auto;
+   }
+   .footer {
+      display: flex;
+      justify-content: space-evenly;
+      line-height: 140%;
+      .footer-side p {
+         margin-bottom: 2vh;
+         padding-bottom: 1%;
+      }
+   }
+}
+
+@media only screen and (min-width: 1500px) {
+   .header {
+      font-size: 3rem;
+      margin: 20vh 10vw;
+   }
+   .app-header {
+      background-size: 180%;
+      font-size: $font-large;
+      .header__company-name {
+         margin-bottom: 3vh;
+      }
+      .header__company-slogan {
+         font-size: $font-large;
+         z-index: 1000;
+         padding-bottom: 5vh;
+         width: 55vw;
+      }
+      .header__main-paragraph {
+         width: 55vw;
+         font-size: $font-medium;
+         margin: 10vh 0;
+      }
+   }
+   .app-informations {
+      table {
+         font-size: $semi-medium-16;
+      }
+      width: 80vw;
+      margin: 0 auto;
+   }
+   .wrapper {
+      .special-img {
+         width: 40vw;
+      }
+      .rotated-photo {
+         transform: rotate(0deg);
+      }
+   }
+   .gold-titbits {
+      .titbit {
+         width: 80vw;
+         &::before {
+            left: -1vw;
+            top: 3vh;
+         }
+      }
+   }
+   .paragraph,
+   .list {
+      line-height: 140%;
+      margin: 5vh auto;
+      width: 92vw;
+      .list-item {
+         font-size: $font-medium;
+         position: relative;
+         margin: 0 0 5vh 7vw;
+         font-family: 'Source Sans Pro', sans-serif;
+      }
+   }
+   .company-adventages-wrapper {
+      .company-adventages {
+         display: flex;
+         width: 95vw;
+         margin: 0 auto;
+         .list {
+            width: 50%;
+            margin: 0;
+            .list-item {
+               font-size: $font-medium;
+            }
+         }
+      }
+   }
+   .FAQ__list li {
+      .FAQ__question {
+         font-size: 3rem;
+      }
+      dfn {
+         font-size: $semi-medium;
+      }
+      width: 70vw;
+      font-size: $font-large;
+      margin: 10vh auto;
+   }
+   .footer {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: $font-normal;
+      line-height: 140%;
+      .footer-side p {
+         margin-bottom: 2vh;
+         padding-bottom: 1%;
+      }
+   }
+}

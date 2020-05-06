@@ -1,0 +1,55 @@
+@import 'variables';
+
+.app {
+   max-width: 100vw;
+   min-height: 100vh;
+   background: $primary-black;
+   color: $secondary-silver;
+   font-size: $core-font-size;
+   font-family: 'Cormorant Upright', serif;
+}
+
+::-moz-selection {
+   background-color: transparent;
+   color: $contrast-gold;
+}
+
+::selection {
+   background-color: transparent;
+   color: $contrast-gold;
+}
+
+.header {
+   margin: 15vh 0 10vh 5vw;
+   font-size: $font-medium;
+   color: $contrast-gold;
+}
+
+.paragraph,
+.list {
+   line-height: 120%;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin: 5vh auto 0;
+   width: 90vw;
+   .list-item {
+      font-size: $semi-medium;
+      margin: 0 0 5vh 5vw;
+      font-family: 'Source Sans Pro', sans-serif;
+   }
+}
+
+i {
+   margin-right: 2vw;
+   color: $contrast-gold;
+}
+
+.payment-ways {
+   font-size: 25px;
+   margin: 15vh 0 0 3vw;
+   padding: 4vh 6vw;
+   background-color: darken($primary-black, 4);
+}
+
+.rotated-photo {
+   transform: rotate(180deg);
+}

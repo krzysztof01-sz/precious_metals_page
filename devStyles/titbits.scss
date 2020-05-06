@@ -1,0 +1,13 @@
+.gold-titbits {
+   .titbit {
+      &::before {
+         content: attr(data-firstLetter);
+         display: block;
+         position: relative;
+         font-size: 50px;
+         top: 2vh;
+         left: -4vw;
+         opacity: 0.3;
+      }
+   }
+}
