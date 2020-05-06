@@ -47,7 +47,7 @@ class ServingAPI {
         echo 'Pallad = '.round($rates['XPD'], 3).' PLN za uncję<br>';
     }
     
-    private function getExchangeRatesAsArray(){
+    public function getExchangeRatesAsArray(): ?array{
         $rates = $this->sendRequest();
         
         return array(

@@ -2,9 +2,9 @@
 
 require_once "ServingAPI.php";
 
-class DatabaseControl(){
-    private $server = '';
-    private $user = '';
+class DatabaseControl{
+    private $server = 'localhost';
+    private $user = 'root';
     private $password = '';
     private $database = 'preciousMetals';
     private $table = 'exchangeRates';
@@ -40,13 +40,13 @@ class DatabaseControl(){
             } else return true;
 
         } catch (Exception $e){
-            $this->reportException($e);
+            echo '<br>Błąd: '.$e->getMessage().'<br>';
             return false;
         }
     }
     
     private function saveExchangeRatesToDB(){
-        $query = "INSERT INTO $this->table (gold, silver, palladium, platinum) VALUES('$this->gold', '$this->silver', '$this->palladium', '$this->platinum')";
+        $query = "INSERT INTO $this->table (gold, silver, palladium, platinum, requestDatetime) VALUES('$this->gold', '$this->silver', '$this->palladium', '$this->platinum', NOW())";
         
         if(@!$this->performQuery($query, false, true))
             throw new Exception('Nie udało się zaktualizować bazy danych na podstawie danych z Metals-API.');
@@ -58,7 +58,7 @@ class DatabaseControl(){
             $this->setExchangeRatesFromAPI($exchangeRates);
             $this->saveExchangeRatesToDB();
         } catch(Exception $e){
-            echo 'Błąd: '$e->getMessage();
+            echo 'Błąd: '.$e->getMessage();
         }
     }
     
@@ -69,10 +69,10 @@ class DatabaseControl(){
         if(@!($retrieved = $this->performQuery($query, true, false)))
             throw new Exception('Nie udało się zaktualizować bazy danych na podstawie danych z Metals-API.');
         
-        $this->gold = $retrieved['Gold'];
-        $this->silver = $retrieved['Silver'];
-        $this->platinum = $retrieved['Platinum'];
-        $this->palladium = $retrieved['Palladium'];
+        $this->gold = $retrieved['gold'];
+        $this->silver = $retrieved['silver'];
+        $this->platinum = $retrieved['platinum'];
+        $this->palladium = $retrieved['palladium'];
     }
     
     public function getGoldExchangeRate(): ?float{
